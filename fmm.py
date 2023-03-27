@@ -23,7 +23,7 @@ def lenTrival(state):
             if state[i][j] == 1: count+=1
     return count
     
-def pointTrival(state):
+def pointTrival(state): # Change to Divide for O(LogN) 
     points = []
     for i in range(0,nx,1):
         for j in range(0,ny,1):
@@ -97,8 +97,8 @@ if __name__ == "__main__":
     while (not lenTrival(state) == 0):
         count +=1 
         print(lenTrival(state))
-        trivalPoints = pointTrival(state)
-        mx, my = getMinTime(trivalPoints)
+        trivalPoints = pointTrival(state) #O(N)
+        mx, my = getMinTime(trivalPoints) #O(N)
         print(mx,my)
         state[mx][my] = 2 # 窄带中的最小T设为 Alive
         ms = getNeighbor(mx,my)
