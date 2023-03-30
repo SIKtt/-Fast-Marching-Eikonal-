@@ -94,6 +94,9 @@ if __name__ == "__main__":
         state[locx][locy] = 2
 # Updating T
     count = 0
+    # A Better way is using Heap to sort
+    # While Heap:
+    #    Heap.pop()
     while (not lenTrival(state) == 0):
         count +=1 
         print(lenTrival(state))
