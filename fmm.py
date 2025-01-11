@@ -115,7 +115,7 @@ if __name__ == "__main__":
                 T2 = min(time[pointx][ytop], time[pointx][ybottom])
                 locVel = vel[pointx][pointy]
                 if abs(T1-T2) < h/locVel:
-                    t = (T1+T2+np.sqrt(2*h*h/locVel - (T1 - T2)**2)) / 2
+                    t = (T1+T2+np.sqrt(2*h*h/(locVel)**2 - (T1 - T2)**2)) / 2
                 else:
                     t = min(T1, T2) + h / locVel
                 time[pointx][pointy] = min(time[pointx][pointy], t)
